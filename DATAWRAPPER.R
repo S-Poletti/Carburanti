@@ -20,6 +20,9 @@ carb$REGIONE[carb$REGIONE=='Trento']<-'Provincia Autonoma di Trento'
 carb$REGIONE[carb$REGIONE=='Friuli Venezia Giulia']<-'Friuli-Venezia Giulia'
 carb$REGIONE[carb$REGIONE=="Valle d'Aosta"]<-"Valle d'Aosta/Vallée d'Aoste"
 
+oggi<-format(Sys.Date(), "%d/%m/%Y")
+
+
 Gasolio<-carb|>filter(TIPOLOGIA=='Gasolio')
 Benzina<-carb|>filter(TIPOLOGIA=='Benzina')
 
@@ -77,6 +80,7 @@ dw_edit_chart(
   )
 
 dw_publish_chart(chart_id_benzina)
+
 
 
 
