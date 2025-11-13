@@ -4,7 +4,6 @@ library(readr)
 library(dplyr)
 library(stringr)
 
-Sys.setenv(DATAWRAPPER_TOKEN = "CQsNCZYyKC97VZi2s1mtycRKGHIcqu9fkvFrNcWU7Ygly94pBM1JB5gDLO6fT7F0")
 
 datawrapper_auth(api_key = Sys.getenv("DATAWRAPPER_TOKEN"), overwrite = TRUE)
 
@@ -80,6 +79,7 @@ dw_edit_chart(
   )
 
 dw_publish_chart(chart_id_benzina)
+
 
 
 
