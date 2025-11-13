@@ -1,6 +1,3 @@
-devtools::install_github("munichrocker/DatawRappr")
-install.packages("rdwd")
-
 library(DatawRappr)
 library(rdwd)
 library(readr)
@@ -80,5 +77,6 @@ dw_edit_chart(
   )
 
 dw_publish_chart(chart_id_benzina)
+
 
 
