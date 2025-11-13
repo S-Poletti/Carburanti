@@ -32,5 +32,7 @@ jobs:
           cache-version: 1
 
       - name: Esegui script carburanti
+        env:
+          DATAWRAPPER_TOKEN: ${{ secrets.DATAWRAPPER_TOKEN }}
         run: |
           Rscript DATAWRAPPER.R
