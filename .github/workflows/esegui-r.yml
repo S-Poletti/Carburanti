@@ -13,14 +13,22 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
-
       - name: Setup R
         uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
 
-      - name: Install required packages
-        run: |
-          Rscript -e 'install.packages(c("tidyverse","dplyr","stringr","data.table","readr","httr","datawrapper"), repos="https://cloud.r-project.org")'
+      - name: Installa (e cache) i pacchetti R
+        uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          extra-packages: |
+            DatawRappr
+            readr
+            dplyr
+            stringr
+            httr
+          cache-version: 1
 
-      - name: Run carburanti script
+      - name: Esegui script carburanti
         run: |
           Rscript DATAWRAPPER.R
