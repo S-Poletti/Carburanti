@@ -81,6 +81,60 @@ dw_edit_chart(
 dw_publish_chart(chart_id_benzina)
 
 
+chart_id_gpl<- "Cdva9"  # <-- sostituisci con l’ID reale della tua mappa
+
+# 1) Mando i dati da R alla mappa
+dw_data_to_chart(
+  GPL,
+  chart_id = chart_id_gpl
+)
+
+# 2) Imposto quali colonne usare come chiave geografica e valore
+dw_edit_chart(
+  chart_id_gpl,
+  visualize = list(
+    keys = list(
+      geoId = "REGIONE",   # nome della colonna con i nomi delle regioni
+      value = "PREZZO.MEDIO"     # colonna col valore da colorare
+    )
+  ),
+  source_name = "MIMIT – Prezzi medi carburanti",
+  source_url  = "https://www.mimit.gov.it/it/prezzo-medio-carburanti/regioni",
+  intro  = paste0("Aggiornato al ", oggi, "."),
+  byline = "Fonte: MIMIT - Prezzi medi carburanti"
+)
+
+# 3) Pubblico la mappa
+dw_publish_chart(chart_id_gapl)
+
+
+
+chart_id_metano<- "1gvPS"  # <-- sostituisci con l’ID reale della tua mappa
+
+# 1) Mando i dati da R alla mappa
+dw_data_to_chart(
+  Metano,
+  chart_id = chart_id_metano
+)
+
+# 2) Imposto quali colonne usare come chiave geografica e valore
+dw_edit_chart(
+  chart_id_metano,
+  visualize = list(
+    keys = list(
+      geoId = "REGIONE",   # nome della colonna con i nomi delle regioni
+      value = "PREZZO.MEDIO"     # colonna col valore da colorare
+    )
+  ),
+  source_name = "MIMIT – Prezzi medi carburanti",
+  source_url  = "https://www.mimit.gov.it/it/prezzo-medio-carburanti/regioni",
+  intro  = paste0("Aggiornato al ", oggi, "."),
+  byline = "Fonte: MIMIT - Prezzi medi carburanti"
+)
+
+# 3) Pubblico la mappa
+dw_publish_chart(chart_id_metano)
+
 
 
 
