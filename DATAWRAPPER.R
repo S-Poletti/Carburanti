@@ -108,7 +108,7 @@ dw_edit_chart(
 )
 
 # 3) Pubblico la mappa
-dw_publish_chart(chart_id_gapl)
+dw_publish_chart(chart_id_gpl)
 
 
 
@@ -137,6 +137,7 @@ dw_edit_chart(
 
 # 3) Pubblico la mappa
 dw_publish_chart(chart_id_metano)
+
 
 
 
