@@ -24,6 +24,9 @@ oggi<-format(Sys.Date(), "%d/%m/%Y")
 
 Gasolio<-carb|>filter(TIPOLOGIA=='Gasolio')
 Benzina<-carb|>filter(TIPOLOGIA=='Benzina')
+GPL<-carb|>filter(TIPOLOGIA=='GPL')
+Metano<-carb|>filter(TIPOLOGIA=='Metano')
+
 
 chart_id_gasolio<- "pg678"  # <-- sostituisci con l’ID reale della tua mappa
 
@@ -134,6 +137,7 @@ dw_edit_chart(
 
 # 3) Pubblico la mappa
 dw_publish_chart(chart_id_metano)
+
 
 
 
