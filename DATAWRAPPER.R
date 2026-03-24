@@ -28,7 +28,7 @@ GPL<-carb|>filter(TIPOLOGIA=='GPL')
 Metano<-carb|>filter(TIPOLOGIA=='Metano')
 
 
-chart_id_gasolio<- "pg678"  # <-- sostituisci con l’ID reale della tua mappa
+chart_id_gasolio<- "pg678" # ID reale della mappa
 
 # 1) Mando i dati da R alla mappa
 dw_data_to_chart(
@@ -58,7 +58,7 @@ dw_publish_chart(chart_id_gasolio)
 
 
 
-chart_id_benzina<- "yBSrS"  # <-- sostituisci con l’ID reale della tua mappa
+chart_id_benzina<- "yBSrS"  # ID reale della mappa
 
 # 1) Mando i dati da R alla mappa
 dw_data_to_chart(
